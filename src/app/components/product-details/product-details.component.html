@@ -1,0 +1,41 @@
+<div style="width: 500px; margin: auto">
+    <div class="submit-form">
+        <div *ngIf="!submitted" >
+            <div class="form-group">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" value="{{currentproduct.productName}}" [(ngModel)]="currentproduct.productName"/>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="form-label">price:</label>
+                <input type="number" class="form-control" id="price" value="{{currentproduct.productPrice}}" [(ngModel)]="currentproduct.productPrice"/>
+            </div>
+
+            <div class="form-group">
+                <label for="ProductPhoto" class="form-label">Photo:</label>
+                <input type="file" class="form-control" id="ProductPhoto" value="{{currentproduct.productPhoto}}" (change)="fileSelected($event)"/>
+            </div>
+
+            <div class="form-group">
+                <label for="NumberInStock" class="form-label">NumberInStock:</label>
+                <input type="number" class="form-control" id="NumberInStock" value="{{currentproduct.numberInStock}}" [(ngModel)]="currentproduct.numberInStock"/>
+            </div>
+
+            <div class="form-group">
+                <label for="Select" class="form-label">categoryName:</label>
+                <select class="form-control" id="Select" [(ngModel)]="currentproduct.catId">
+                    <option *ngFor="let x of categoryName" value="{{x.categoryId}}">{{x.categoryName}}</option>
+                  </select><br>
+            </div>
+
+            <div class="form-actions center">
+                <button (click)="updateProduct()" class="btn btn-success">Update</button> |
+                <button (click)="showUserDeleteBox()" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+
+        <div *ngIf="submitted">
+            <h3>You successfully Update a product!</h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class = "container">
+  <div class = "meal-wrapper">
+    <div class = "meal-result">
+      <h2 class = "title">All Product:</h2>
+      <div id= "meal">
+        <!-- meal item -->
+        <div class = "meal-item" *ngFor="let x of products">
+          <div class = "meal-img">
+            <img [src] = "imgUrl" alt = "product">
+          </div>
+          <div class = "meal-name">
+            <h3>{{x.productName}}</h3>
+            <h6>Number In Stock : {{x.numberInStock}}</h6>
+            <h6>{{x.productPrice}}$</h6>
+            <a class = "recipe-btn" routerLink="/products/{{x.productId}}">Details</a>
+          </div>
+        </div>
+        <!-- end of meal item -->
+      </div>
+    </div>
+  </div>
+</div>

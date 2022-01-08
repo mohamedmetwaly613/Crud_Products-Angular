@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  */
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.text{
+    opacity: 0.8;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*  */
+.container{
+    min-height: 100vh;
+}
+.meal-wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+.meal-result{
+    margin-top: 4rem;
+}
+#meal{
+    margin: 2.4rem 0;
+}
+.meal-item{
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+.meal-img img{
+    width: 100%;
+    display: block;
+}
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+    font-size: 1.4rem;
+}
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    background: #d65108;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.recipe-btn:hover{
+    background: #b54507;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
